@@ -15,6 +15,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.concursia.data.database.entity.StudySessionEntity
 import com.concursia.data.database.entity.TopicEntity
 import com.concursia.data.repository.ConcursiaRepository
@@ -144,7 +145,7 @@ fun StudyScreen(
                         ) {
                             Column(modifier = Modifier.padding(20.dp)) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text("💡", fontSize = 24.dp)
+                                    Text("💡", fontSize = 24.sp)
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Text(
                                         "Resumo do Tópico",
@@ -187,7 +188,7 @@ fun StudyScreen(
                                     modifier = Modifier.padding(16.dp),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Text("🎉", fontSize = 28.dp)
+                                    Text("🎉", fontSize = 28.sp)
                                     Spacer(modifier = Modifier.width(12.dp))
                                     Column {
                                         Text(
@@ -288,7 +289,7 @@ fun StudyContent(content: String) {
             }
             line.startsWith("✅") || line.startsWith("- [x]") || line.startsWith("- [X]") -> {
                 Row(modifier = Modifier.padding(vertical = 2.dp)) {
-                    Text("✅", fontSize = 14.dp)
+                    Text("✅", fontSize = 14.sp)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         line.replace("✅", "").replace("- [x]", "").replace("- [X]", "").trim(),
