@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.concursia.billing.SubscriptionManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 @Composable
