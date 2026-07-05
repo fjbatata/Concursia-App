@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.concursia.billing.SubscriptionManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.suspendCoroutine
 
 @Composable
 fun SplashScreen(
@@ -40,7 +40,7 @@ fun SplashScreen(
 
     LaunchedEffect(Unit) {
         // Aguarda inicialização
-        val initialized = suspendCancellableCoroutine<Boolean> { cont ->
+        val initialized = suspendCoroutine<Boolean> { cont ->
             subscriptionManager.initialize { ready ->
                 cont.resume(ready)
             }
