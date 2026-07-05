@@ -12,6 +12,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
 import com.concursia.data.database.entity.QuizAttemptEntity
 import com.concursia.data.database.entity.StudySessionEntity
 import com.concursia.data.repository.ConcursiaRepository
@@ -114,7 +116,7 @@ fun ProgressScreen(
                             modifier = Modifier.fillMaxWidth().padding(24.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Text("📝", fontSize = 40.dp)
+                            Text("📝", fontSize = 40.sp)
                             Spacer(modifier = Modifier.height(8.dp))
                             Text(
                                 "Nenhum simulado realizado ainda",
@@ -198,7 +200,7 @@ private fun StatCard(
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(icon, fontSize = 28.dp)
+            Text(icon, fontSize = 28.sp)
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 value,
@@ -219,7 +221,7 @@ private fun QuizAttemptCard(attempt: QuizAttemptEntity) {
     val scorePercent = (attempt.score * 100).toInt()
     val scoreColor = when {
         scorePercent >= 70 -> MaterialTheme.colorScheme.tertiary
-        scorePercent >= 50 -> MaterialTheme.colorScheme.warning
+        scorePercent >= 50 -> Color(0xFFFFA726) // warning orange
         else -> MaterialTheme.colorScheme.error
     }
 
