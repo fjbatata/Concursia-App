@@ -16,7 +16,7 @@ class ConcursiaRepository(private val db: ConcursiaDatabase) {
 
     // === SUBJECTS ===
     fun getSubjectsByConcurso(concursoId: String) = db.subjectDao().getSubjectsByConcurso(concursoId)
-    fun getSubjectById(id: String) = db.subjectDao().getSubjectById(id)
+    suspend fun getSubjectById(id: String) = db.subjectDao().getSubjectById(id)
 
     // === TOPICS ===
     fun getTopicsBySubject(subjectId: String) = db.topicDao().getTopicsBySubject(subjectId)
