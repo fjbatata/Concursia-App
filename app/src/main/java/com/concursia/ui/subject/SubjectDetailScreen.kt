@@ -138,7 +138,7 @@ fun TopicCard(
 ) {
     val diffColor = when (topic.difficulty) {
         "Fácil" -> MaterialTheme.colorScheme.tertiary
-        "Médio" -> Color(0xFFFFA726) // warning orange
+        "Médio" -> Color(0xFFFFA726L) // warning orange
         "Difícil" -> MaterialTheme.colorScheme.error
         else -> MaterialTheme.colorScheme.onSurfaceVariant
     }
