@@ -66,7 +66,7 @@ fun StudyScreen(
                     // Botão de resumo
                     IconButton(onClick = { showSummary = !showSummary }) {
                         Icon(
-                            if (showSummary) Icons.Default.Lightbulb else Icons.Default.LightbulbOutline,
+                            if (showSummary) Icons.Default.Lightbulb else Icons.Default.Lightbulb,
                             "Resumo"
                         )
                     }
