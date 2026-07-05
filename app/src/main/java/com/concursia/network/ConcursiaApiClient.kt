@@ -5,6 +5,7 @@ import kotlinx.coroutines.withContext
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
 import java.net.URL
+import com.concursia.BuildConfig
 
 /**
  * Cliente HTTP para comunicação com o backend Concursia Admin.
@@ -80,7 +81,7 @@ class ConcursiaApiClient(
                 "acao" to acao,
                 "detalhes" to detalhes
             )
-            if (minutos > 0) json["minutos"] = minutos
+            if (minutos > 0) json["minutos"] = minutos.toString()
             val (code, _) = post("/api/v1/atividade", json)
             ApiResult(sucesso = code == 200, data = code == 200)
         } catch (e: Exception) {
