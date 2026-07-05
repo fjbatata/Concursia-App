@@ -52,7 +52,6 @@ data class TopicEntity(
 data class QuestionEntity(
     @PrimaryKey val id: String,
     val topicId: String,
-    val subjectId: String = "",
     val concursoId: String,
     val question: String,
     val options: List<String>,
@@ -60,7 +59,8 @@ data class QuestionEntity(
     val explanation: String,
     val banca: String,
     val year: Int,
-    val difficulty: String
+    val difficulty: String,
+    val subjectId: String = ""
 )
 
 @Entity(tableName = "quiz_attempts")
