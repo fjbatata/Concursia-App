@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Concursia</string>
+    <string name="app_tagline">Seu professor de concursos</string>
+
+    <!-- Navegação -->
+    <string name="nav_home">Início</string>
+    <string name="nav_study">Estudar</string>
+    <string name="nav_quiz">Simulados</string>
+    <string name="nav_progress">Progresso</string>
+
+    <!-- Home -->
+    <string name="welcome_message">Pronto para conquistar sua vaga? 🎯</string>
+    <string name="continue_studying">Continuar Estudos</string>
+    <string name="upcoming_exams">Próximos Concursos</string>
+    <string name="study_now">Estudar Agora</string>
+    <string name="quick_quiz">Simulado Rápido</string>
+
+    <!-- Concurso -->
+    <string name="subjects_title">Matérias</string>
+    <string name="topics_title">Tópicos</string>
+    <string name="study_materials">Material de Estudo</string>
+
+    <!-- Estudo -->
+    <string name="start_lesson">Iniciar Lição</string>
+    <string name="mark_complete">Concluir</string>
+    <string name="lesson_completed">Lição concluída! 🎉</string>
+
+    <!-- Quiz -->
+    <string name="start_quiz">Iniciar Simulado</string>
+    <string name="next_question">Próxima</string>
+    <string name="previous_question">Anterior</string>
+    <string name="show_results">Ver Resultado</string>
+    <string name="correct_answer">Resposta Correta!</string>
+    <string name="wrong_answer">Resposta Errada</string>
+    <string name="score">Pontuação</string>
+    <string name="quiz_completed">Simulado Concluído!</string>
+
+    <!-- Progresso -->
+    <string name="your_progress">Seu Progresso</string>
+    <string name="total_study_time">Tempo Total de Estudo</string>
+    <string name="completed_lessons">Lições Concluídas</string>
+    <string name="average_score">Média de Acertos</string>
+    <string name="streak_days">Dias Seguidos</string>
+    <string name="performance_chart">Gráfico de Desempenho</string>
+
+    <!-- Geral -->
+    <string name="loading">Carregando...</string>
+    <string name="error_occurred">Ops! Algo deu errado</string>
+    <string name="retry">Tentar Novamente</string>
+    <string name="no_data">Nenhum dado disponível</string>
+    <string name="back">Voltar</string>
+</resources>
