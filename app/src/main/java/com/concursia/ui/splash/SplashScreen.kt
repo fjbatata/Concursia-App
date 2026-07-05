@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.concursia.billing.SubscriptionManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 
 @Composable
 fun SplashScreen(
@@ -38,18 +39,22 @@ fun SplashScreen(
     )
 
     LaunchedEffect(Unit) {
-        subscriptionManager.initialize { ready ->
-            delay(500)
-
-            // Verifica assinatura local + remota
-            val localActive = subscriptionManager.hasActiveSubscription()
-
-            if (localActive) {
-                // Se tem assinatura local, tenta verificar servidor (opcional)
-                onNavigateToHome()
-            } else {
-                onNavigateToPaywall()
+        // Aguarda inicialização
+        val initialized = suspendCancellableCoroutine<Boolean> { cont ->
+            subscriptionManager.initialize { ready ->
+                cont.resume(ready)
             }
+        }
+
+        delay(500)
+
+        // Verifica assinatura local + remota
+        val localActive = subscriptionManager.hasActiveSubscription()
+
+        if (localActive) {
+            onNavigateToHome()
+        } else {
+            onNavigateToPaywall()
         }
     }
 
