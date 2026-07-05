@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.concursia.data.database.entity.ConcursoEntity
 import com.concursia.data.database.entity.SubjectEntity
 import com.concursia.data.repository.ConcursiaRepository
