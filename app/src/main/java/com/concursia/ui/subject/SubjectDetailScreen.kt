@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -137,7 +138,7 @@ fun TopicCard(
 ) {
     val diffColor = when (topic.difficulty) {
         "Fácil" -> MaterialTheme.colorScheme.tertiary
-        "Médio" -> MaterialTheme.colorScheme.warning
+        "Médio" -> Color(0xFFFFA726) // warning orange
         "Difícil" -> MaterialTheme.colorScheme.error
         else -> MaterialTheme.colorScheme.onSurfaceVariant
     }
