@@ -106,7 +106,7 @@ class SubscriptionManager(private val context: Context) {
     private fun queryExistingPurchases() {
         billingClient?.queryPurchasesAsync(
             QueryPurchasesParams.newBuilder()
-                .setProductType(ProductType.SUBS)
+                .setProductType(BillingClient.ProductType.SUBS)
                 .build()
         ) { billingResult, purchases ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases.isNotEmpty()) {
@@ -124,7 +124,7 @@ class SubscriptionManager(private val context: Context) {
         val productList = listOf(
             QueryProductDetailsParams.Product.newBuilder()
                 .setProductId(SUBSCRIPTION_ID)
-                .setProductType(ProductType.SUBS)
+                .setProductType(BillingClient.ProductType.SUBS)
                 .build()
         )
 
@@ -177,7 +177,7 @@ class SubscriptionManager(private val context: Context) {
             _subscriptionState.value = SubscriptionState(
                 isPurchased = true,
                 expiryDate = expiryDate,
-                daysRemaining = SIX_MONTHS_MS / (24 * 60 * 60 * 1000).toInt(),
+                daysRemaining = (SIX_MONTHS_MS / (24 * 60 * 60 * 1000)).toInt(),
                 isExpired = false,
                 isLoading = false
             )
