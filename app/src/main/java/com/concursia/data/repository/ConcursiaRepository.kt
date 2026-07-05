@@ -50,8 +50,8 @@ class ConcursiaRepository(private val db: ConcursiaDatabase) {
      * Carrega dados iniciais de exemplo com concursos reais brasileiros
      */
     suspend fun loadSampleData() {
-        // Só carrega se vazio
-        if (db.concursoDao().getActiveConcursos().let { it.value }?.isNotEmpty() == true) return
+        val existing = db.concursoDao().getConcursosCount()
+        if (existing > 0) return
 
         val now = System.currentTimeMillis()
 
