@@ -27,6 +27,9 @@ interface ConcursoDao {
     @Query("UPDATE concursos SET isFavorite = :isFavorite WHERE id = :id")
     suspend fun toggleFavorite(id: String, isFavorite: Boolean)
 
+    @Query("SELECT COUNT(*) FROM concursos")
+    suspend fun getConcursosCount(): Int
+
     @Query("DELETE FROM concursos")
     suspend fun deleteAll()
 }
