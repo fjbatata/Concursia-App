@@ -52,6 +52,7 @@ data class TopicEntity(
 data class QuestionEntity(
     @PrimaryKey val id: String,
     val topicId: String,
+    val subjectId: String = "",
     val concursoId: String,
     val question: String,
     val options: List<String>,
