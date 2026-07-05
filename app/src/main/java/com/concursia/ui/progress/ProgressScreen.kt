@@ -221,7 +221,7 @@ private fun QuizAttemptCard(attempt: QuizAttemptEntity) {
     val scorePercent = (attempt.score * 100).toInt()
     val scoreColor = when {
         scorePercent >= 70 -> MaterialTheme.colorScheme.tertiary
-        scorePercent >= 50 -> Color(0xFFFFA726) // warning orange
+        scorePercent >= 50 -> Color(0xFFFFA726L) // warning orange
         else -> MaterialTheme.colorScheme.error
     }
 
